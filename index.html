@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bot Commerce Platform</title>
+
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <div id="app">
+        <script id="bcp" type="text/x-handlebars-template">
+
+            <header id="top-nav" class="header site-header">
+                <div class="container">
+                    <div class="header__wrapper">
+                        <div class="header__logo">
+                            <img src="images/logo.svg" alt="logo">
+                        </div>
+
+                        <div class="header__menu__overlay"></div>
+            
+                        <div class="header__menu">
+                            <ul class="header__nav">
+                                {{#each header.menu}}
+                                <li class="header__nav-item"><a href="#{{id}}" class="header__nav-link">{{name}}</a></li>
+                                {{/each}}
+                            </ul>
+
+                            <div class="custom-select">
+                                <select>
+                                    <option value="{{header.language.[0]}}" selected>{{header.language.[0]}}</option>
+                                    <option value="{{header.language.[1]}}">{{header.language.[1]}}</option>
+                                    <option value="{{header.language.[2]}}">{{header.language.[2]}}</option>
+                                </select>
+                            </div>
+
+                            <button class="button header__button">{{buttonText}}<img class="button__arrow" src="images/arrow_right.svg" alt="arrow"></button>
+                        </div>
+
+                        <div class="header__burger--toggler">
+                            <div class="header__burger">
+                                <div class="header__burger--line header__burger--line-top"></div>
+                                <div class="header__burger--line header__burger--line-middle"></div>
+                                <div class="header__burger--line header__burger--line-bottom"></div>
+                            </div>
+            
+                            <div class="header__burger--trigger"></div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            
+            <section id="{{header.menu.[0].id}}" class="nav-anchor main">
+                <div class="container">
+                    <h1 class="main__text-lg">{{main.h1}}</h1>
+
+                    <div>
+                        <span class="main__text-md">{{main.text}}</span>
+                    </div>
+
+                    <div class="main__hero">
+                        <img class="main__hero-image" src="images/hero-image.svg" alt="hero">
+
+                        <div class="main__hero-cloud main__hero-cloud-1">
+                            <span class="main__text-sm">{{main.cloud1}}</span>
+                        </div>
+
+                        <div class="main__hero-cloud main__hero-cloud-2">
+                            <span class="main__text-sm">{{main.cloud2}}</span>
+                        </div>
+                        
+                        <div class="main__hero-cloud main__hero-cloud-3">
+                            <span class="main__text-sm">{{main.cloud3}} 😊</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="{{header.menu.[1].id}}" class="nav-anchor about-us">
+                <div class="about-us__top">
+                    <div class="mobile-animate">
+                        <img class="mobile-animate__image--large" src="images/mobile.svg" alt="mobile">
+                        <img class="mobile-animate__logo" src="images/logo.svg" alt="logo">
+                        <img class="mobile-animate__image--small" src="images/mobile-sm.svg" alt="mobile-sm">
+                    </div>
+                    <div class="container">
+                        <p class="about-us__top-text">{{aboutUs.topText}}</p>
+                    </div>
+                </div>
+
+                <div class="about-us__middle">
+                    <div class="container">
+                        <div class="about-us__middle__text">
+                            <h2 class="about-us__middle__text-lg about-us__middle__text-margin">{{aboutUs.middleHeading}}</h2>
+
+                            <div class="about-us__middle__text-margin">
+                                <span class="about-us__middle__text-md">{{aboutUs.middleText}}</span>
+                            </div>
+
+                            <img class="about-us__middle__img" src="images/dots-line.svg" alt="dots line">
+                        </div>
+
+                        <div class="about-us__icon--absolute about-us__icon-tg">
+                            <img src="images/icon-tg.svg" alt="telegram">
+                        </div>
+
+                        <div class="about-us__icon--absolute about-us__icon-msn">
+                            <img src="images/icon-msn.svg" alt="messenger">
+                        </div>
+
+                        <div class="about-us__icon--absolute about-us__icon-viber">
+                            <img src="images/icon-viber.svg" alt="viber">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-us__bottom">
+                    <div class="container">
+                        <div class="about-us__grid__wrapper">
+                            <div class="about-us__grid__column about-us__bottom__padding">
+                                <div class="about-us__bottom__margin">
+                                    <span class="about-us__bottom__text-lg about-us__bottom__text-bold about-us__bottom__text-block">{{aboutUs.bottomHeadingBold}}</span>
+                                    <span class="about-us__bottom__text-lg">{{aboutUs.bottomHeadingRegular}}</span>
+                                </div>
+
+                                <p class="about-us__bottom__margin">{{aboutUs.bottomText}}</p>
+
+                                <button class="button about-us__button">{{buttonText}}<img class="button__arrow" src="images/arrow_right.svg" alt="arrow"></button>
+                            </div>
+
+                            <div class="about-us__grid__column about-us__bottom__padding about-us__bottom__padding-md">
+                                <div class="about-us__bottom__images">
+                                    <img class="about-us__bottom__image1" src="images/mobile-content.svg" alt="mobile">
+
+                                    <img class="about-us__bottom__image2" src="images/hero-man.svg" alt="hero">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="{{header.menu.[2].id}}" class="nav-anchor business-types">
+                <div class="container business-types__padding">
+                    <div class="business-types__heading__margin">
+                        <span>{{businessTypes.heading}}</span>
+                    </div>
+                </div>
+            </section>
+
+            <section id="{{header.menu.[3].id}}" class="nav-anchor"></section>
+            <section id="{{header.menu.[4].id}}" class="nav-anchor"></section>
+            <section id="{{header.menu.[5].id}}" class="nav-anchor"></section>
+        </script>
+    </div>
+
+    <!-- Scripts BEGIN -->
+    <script type="text/javascript" src="scripts/handlebars.min-v4.7.6.js"></script>
+    <script type="text/javascript"
+            src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+    </script>
+    <script type="text/javascript" src="scripts/jquery.spincrement.js"></script>
+    <script type="text/javascript" src="scripts/data.js"></script>
+    <script type="text/javascript" src="scripts/main.js"></script>
+    <!-- Scripts END -->
+</body>
+</html>

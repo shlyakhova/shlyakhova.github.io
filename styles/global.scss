@@ -1,0 +1,90 @@
+/*=== Global selectors ===*/
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+img,
+i,
+ol,
+ul,
+li,
+form,
+label,
+table,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+footer,
+header,
+menu,
+nav,
+section {
+  font-family: 'Geometria', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+html {
+  font-size: 10px;
+}
+body {
+  width: 100%;
+  
+}
+h1, h2, h3, h4, h5, p, span{
+  font-weight: 800;
+  color: #1A2A7C;
+}
+h1{
+  font-size: 6.6rem;
+  line-height: 5.4rem;
+  letter-spacing: 0.01em;
+}
+h2{
+  font-size: 6rem;
+  line-height: 6rem;
+}
+h3{
+  font-size: 4rem;
+  line-height: 4.8rem;
+}
+h4{
+  font-weight: 500;
+  font-size: 4rem;
+  line-height: 4.8rem;
+}
+h5{
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 3rem;
+}
+p, span{
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+  letter-spacing: 0.01em;
+}
+img {
+  height: auto;
+  max-width: 100%;
+}
+input { /*reset default styles for iPhone*/
+  border-radius: 0;
+  -webkit-appearance: none;
+  outline: none;
+}
+a:focus {
+  outline: none;
+}

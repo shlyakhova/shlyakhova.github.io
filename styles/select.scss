@@ -1,0 +1,67 @@
+/* The container must be positioned relative: */
+.custom-select {
+    position: relative;
+}
+  
+.custom-select select {
+    display: none; /*hide original SELECT element: */
+}
+
+/* Style the arrow inside the select element: */
+.select-selected:after {
+    position: absolute;
+    content: "";
+    top: 1.5rem;
+    right: 1.6rem;
+    width: 2rem;
+    height: 2rem;
+    // background: url('../images/arrow-icon.svg') no-repeat center center;
+    -webkit-transition: all .27s ease-in-out;
+        -o-transition: all .27s ease-in-out;
+            transition: all .27s ease-in-out;
+
+    -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+         -o-transform: rotate(0deg);
+            transform: rotate(0deg);
+}
+
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active:after {
+    -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+         -o-transform: rotate(180deg);
+            transform: rotate(180deg);
+}
+
+/* style the items (options), including the selected item: */
+.select-items div,.select-selected {
+    height: 5rem;
+    font-size: 1.55rem;
+    line-height: 5rem;
+    color: $dark-blue;
+    padding: 0 1.6rem;
+    border: 0.1rem solid #e1e1e1;
+    cursor: pointer;
+}
+
+/* Style items (options): */
+.select-items {
+position: absolute;
+max-height: 25rem;
+overflow: auto;
+background-color: #fff;
+top: 100%;
+left: 0;
+right: 0;
+z-index: 99;
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+background-color: rgba(0, 0, 0, 0.1);
+}

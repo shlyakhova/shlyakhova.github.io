@@ -1,0 +1,150 @@
+.header {
+  width: 100%;
+  background-color: #fff;
+  &__wrapper {
+    @include flex-locating(row, center, space-between);
+    position: relative;
+    height: 11.4rem;
+    border-bottom: 0.1rem solid rgba(0, 0, 0, 0.1);
+    @include sm {
+      height: 6rem;
+      border-bottom: none;
+    }
+  }
+  &__logo {
+    width: 15.4rem;
+    @include sm {
+      width: 10rem;
+    }
+  }
+  &__menu {
+    @include flex-locating(row, center, space-between);
+    @include md {
+      position: absolute;
+      top: 11.4rem;
+      left: -1.5rem;
+      width: 100%;
+      height: calc(100vh - 11.4rem);
+      padding: 0 1.5rem 0;
+      display: none;
+      background: #fff;
+    }
+    @include sm {
+      top: 6rem;
+      height: calc(100vh - 6rem);
+    }
+    &__overlay {
+      display: none;
+      @include md {
+        position: fixed;
+        top: 11.4rem;
+        left: 0;
+        width: 100vw;
+        height: calc(100vh - 11.4rem);
+        background: #fff;
+      }
+      @include sm {
+        top: 6rem;
+        height: calc(100vh - 6rem);
+      }
+    }
+  }
+  &__nav {
+    padding-right: 7rem;
+    @include lg {
+      padding-right: 1.5rem;
+    }
+    @include md {
+      padding: 1.5rem 0 2rem;
+    }
+    &-item {
+      padding: 0 2rem;
+      display: inline-block;
+      &.current,
+      &:hover {
+        .header__nav-link {
+          color: $blue;
+          border-bottom: 0.2rem solid $blue;
+          @include md {
+            border-bottom: 0.2rem solid transparent;
+          }
+        }
+      }
+      @include lg {
+        padding: 0 1rem;
+      }
+      @include md {
+        display: block;
+        padding: 0;
+      }
+    }
+    &-link {
+      display: block;
+      color: $dark-blue;
+      text-decoration: none;
+      font-size: 1.4rem;
+      line-height: 17px;
+      font-weight: bold;
+      border-bottom: 0.2rem solid transparent;
+      &.active {
+        color: $blue;
+        border-bottom: 0.2rem solid $blue;
+        @include md {
+          border-bottom: 0.2rem solid transparent;
+        }
+      }
+      @include md {
+        padding: 1.5rem 0;
+        font-size: 1.6rem;
+      }
+    }
+    
+  }
+  &__button {
+    width: 17rem;
+    margin-left: 1.5rem;
+    @include md {
+      margin: 5.4rem 0 2rem;
+    }
+  }
+  &__burger {
+    &--toggler {
+      display: none;
+      position: relative;
+      cursor: pointer;
+      @include md {
+        display: block;
+      }
+    }
+    &--line {
+      width: 3rem;
+      border-top: 0.2rem solid #111;
+      margin-bottom: 0.6rem;
+      &-bottom {
+        margin-bottom: 0;
+      }
+    }
+    &--trigger {
+      position: absolute;
+      height: 200%;
+      width: 200%;
+      top: -50%;
+      left: -50%;
+    }
+  }
+
+  &#top-nav {
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    transition: top 0.5s ease-in-out;
+  }
+  &.site-header-hide {
+    top: -11.4rem !important;
+  }
+}
+.menu-open {
+  #top-nav.header.site-header-hide {
+    top: 0 !important;
+  }
+}

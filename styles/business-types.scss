@@ -1,0 +1,12 @@
+.business-types {
+    padding: 14rem 0 20rem;
+    background: #F6F7FF;
+    &__padding {
+        padding: 0 10rem;
+    }
+    &__heading {
+        &__margin {
+            margin-bottom: 9.7rem;
+        }
+    }
+}
