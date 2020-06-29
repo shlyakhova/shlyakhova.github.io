@@ -142,14 +142,76 @@
             </section>
 
             <section id="{{header.menu.[2].id}}" class="nav-anchor business-types">
-                <div class="container business-types__padding">
+                <div class="container business-types__padding business-types__display--flex">
                     <div class="business-types__heading__margin">
-                        <span>{{businessTypes.heading}}</span>
+                        <span class="business-types__heading">{{businessTypes.heading}}</span>
                     </div>
+
+                    {{#each businessTypes.items}}
+                    <div class="{{#if status}}business-types__item--disabled{{/if}} 
+                                business-types__item">
+                        <div class="business-types__item__text">
+                            {{title}}
+                            {{#if status}}
+                            <span class="business-types__item__status">{{status}}</span>
+                            {{/if}}
+                        </div>
+                        
+                        {{#if image}}
+                        <div class="business-types__item__image {{class}}">
+                            <div class="business-types__item__image-background"></div>
+                            <img class="business-types__item__img" src={{image}} alt={{class}}>
+                        </div>
+                        {{/if}}
+                    </div>
+                    {{/each}}
                 </div>
             </section>
 
-            <section id="{{header.menu.[3].id}}" class="nav-anchor"></section>
+            <section id="{{header.menu.[3].id}}" class="nav-anchor users">
+                <div class="container">
+                    <div class="users__content-wrapper">
+                        <div class="users__column users__column--order-3">
+                            <h3 class="text__color--white users__title--margin">{{users.title}}</h3> 
+
+                            <p class="text__color--white users__text--margin users__text--opacity">{{users.text1}}</p>
+
+                            <p class="text__color--white">{{users.text2}}</p>
+
+                            <div class="users__icons__wrapper">
+                                <div class="users__icon__circle">
+                                    <img src="images/icon-tg.svg" alt="telegram">
+                                </div>
+                                <div class="users__icon__circle">
+                                    <img class="users__icon__msn" src="images/icon-msn.svg" alt="messenger">
+                                </div>
+                                <div class="users__icon__circle">
+                                    <img class="users__icon__viber" src="images/icon-viber.svg" alt="viber">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="users__column users__middle__margin users__column--order-1">
+                            <img src="images/user-mobile.svg" alt="mobile">
+                        </div>
+
+                        <div class="users__column users__column--order-2 users__column--margin">
+                            <div class="users__navigation">
+                                <div class="users__navigation--circle users__navigation__prev">
+                                    <img class="users__navigation__prev--arrow" src="images/arrow_right.svg" alt="arrow-left">
+                                </div>
+                                <div class="users__navigation--circle users__navigation__next">
+                                    <img class="users__navigation__next--arrow" src="images/arrow_right.svg" alt="arrow-right">
+                                </div>
+                            </div>
+                            <div class="users__subtitle__wrapper">
+                                <span class="text__color--white users__subtitle">{{users.subtitle}}</span>
+                            </div>
+                            <p class="text__color--white users__text--opacity">{{users.sliderText}}</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
             <section id="{{header.menu.[4].id}}" class="nav-anchor"></section>
             <section id="{{header.menu.[5].id}}" class="nav-anchor"></section>
         </script>

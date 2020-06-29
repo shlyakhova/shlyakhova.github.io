@@ -1,0 +1,116 @@
+.users {
+  background: $violet;
+  @include sm {
+      padding: 5.9rem 0 8rem;
+  }
+  &__title {
+    &--margin {
+      margin-bottom: 1.5rem;
+    }
+  }
+  &__subtitle {
+    font-size: 2rem;
+    line-height: 2.8rem;
+    &__wrapper {
+      margin-bottom: 2.1rem;
+    }
+  }
+  &__text {
+    &--margin {
+      margin-bottom: 5.6rem;
+      @include sm {
+          margin-bottom: 2.8rem;
+      }
+    }
+    &--opacity {
+      opacity: 0.7;
+    }
+  }
+  &__content-wrapper {
+    padding: 0 7rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    @include md {
+        padding: 0;
+        margin: 0 -1.5rem;
+    }
+  }
+  &__column {
+    width: 33%;
+    padding: 0 1.5rem;
+    @include sm {
+        width: 100%;
+        &--order-1 {
+            order: 1;
+        }
+        &--order-2 {
+            order: 2;
+        }
+        &--order-3 {
+            order: 3;
+        }
+        &--margin {
+            margin-bottom: 6.3rem;
+        }
+    }
+  }
+  &__icons {
+    &__wrapper {
+      display: flex;
+      padding: 1.2rem 0 0;
+    }
+  }
+  &__icon {
+    &__circle {
+      width: 6rem;
+      height: 6rem;
+      margin-right: 2rem;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    &__msn {
+      width: 5.8rem;
+      padding-top: 0.3rem;
+    }
+    &__viber {
+      width: 4.5rem;
+      padding-top: 0.3rem;
+    }
+  }
+  &__middle {
+    &__margin {
+      padding-top: 10.2rem;
+      margin-bottom: -8.1rem;
+      @include sm {
+          padding-top: 0;
+          padding-bottom: 4rem;
+          margin-bottom: 0;
+          text-align: center;
+      }
+    }
+  }
+  &__navigation {
+    display: flex;
+    &--circle {
+        width: 6rem;
+        height: 6rem;
+        margin-bottom: 4.3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+    }
+    &__prev {
+        margin-right: 2rem;
+        &--arrow {
+            transform: rotate(180deg);
+        }
+    }
+  }
+}

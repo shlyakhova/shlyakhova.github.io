@@ -6,21 +6,21 @@
   padding: 0 1.5rem;
   margin: auto;
 }
-.input{
+.input {
   max-width: 100%;
   height: 5.4rem;
   padding: 0 2rem;
   font-size: 1.6rem;
   line-height: 5.4rem;
   background: #fff;
-  border: 2px solid #CCCEDE;
+  border: 2px solid #cccede;
   border-radius: 8px;
   box-sizing: border-box;
-  &:focus{
+  &:focus {
     border-color: $blue;
   }
 }
-.button{
+.button {
   max-width: 100%;
   height: 5.4rem;
   padding: 0 1.7rem;
@@ -33,34 +33,37 @@
   border-radius: 5rem;
   text-decoration: none;
   text-transform: uppercase;
-  &:disabled{
-    background-color: #E8EAFF;
+  &:disabled {
+    background-color: #e8eaff;
   }
-  &__arrow{
+  &__arrow {
     margin-left: 1rem;
   }
 }
+.text__color--white {
+  color: #fff;
+}
 
 @include lg {
-  .container{
+  .container {
     width: 96rem;
   }
 }
 
 @include md {
-  .container{
+  .container {
     width: 72rem;
   }
 }
 
 @include sm {
-  .container{
+  .container {
     width: 54rem;
   }
 }
 
 @include xs {
-  .container{
+  .container {
     width: 100%;
   }
 }
