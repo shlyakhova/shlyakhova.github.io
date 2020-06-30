@@ -18,15 +18,14 @@
                             <img src="images/logo.svg" alt="logo">
                         </div>
 
-                        <div class="header__menu__overlay"></div>
-            
+                        
                         <div class="header__menu">
                             <ul class="header__nav">
                                 {{#each header.menu}}
                                 <li class="header__nav-item"><a href="#{{id}}" class="header__nav-link">{{name}}</a></li>
                                 {{/each}}
                             </ul>
-
+                            
                             <div class="custom-select">
                                 <select>
                                     <option value="{{header.language.[0]}}" selected>{{header.language.[0]}}</option>
@@ -34,20 +33,57 @@
                                     <option value="{{header.language.[2]}}">{{header.language.[2]}}</option>
                                 </select>
                             </div>
-
+                            
                             <button class="button header__button">{{buttonText}}<img class="button__arrow" src="images/arrow_right.svg" alt="arrow"></button>
                         </div>
-
+                        
                         <div class="header__burger--toggler">
                             <div class="header__burger">
                                 <div class="header__burger--line header__burger--line-top"></div>
                                 <div class="header__burger--line header__burger--line-middle"></div>
                                 <div class="header__burger--line header__burger--line-bottom"></div>
                             </div>
-            
+                            
                             <div class="header__burger--trigger"></div>
                         </div>
-                    </div>
+
+                        <div class="header__menu__overlay">
+                            <div class="container">
+                                <div class="header__wrapper">
+                                    <div class="header__logo">
+                                        <img src="images/logo.svg" alt="logo">
+                                    </div>
+
+                                    <div class="header__burger--toggler">
+                                        <div class="header__burger">
+                                            <div class="header__burger--line header__burger--line-top"></div>
+                                            <div class="header__burger--line header__burger--line-middle"></div>
+                                            <div class="header__burger--line header__burger--line-bottom"></div>
+                                        </div>
+                        
+                                        <div class="header__burger--trigger"></div>
+                                    </div>
+                                </div>
+                                <div class="header__menu">
+                                    <ul class="header__nav">
+                                        {{#each header.menu}}
+                                        <li class="header__nav-item"><a href="#{{id}}" class="header__nav-link">{{name}}</a></li>
+                                        {{/each}}
+                                    </ul>
+                                    
+                                    <div class="custom-select">
+                                        <select>
+                                            <option value="{{header.language.[0]}}" selected>{{header.language.[0]}}</option>
+                                            <option value="{{header.language.[1]}}">{{header.language.[1]}}</option>
+                                            <option value="{{header.language.[2]}}">{{header.language.[2]}}</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <button class="button header__button">{{buttonText}}<img class="button__arrow" src="images/arrow_right.svg" alt="arrow"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
                 </div>
             </header>
             

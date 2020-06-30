@@ -750,32 +750,20 @@ a:focus {
             flex-direction: row; }
     @media screen and (max-width: 991px) {
       .header__menu {
-        position: absolute;
-        top: 11.4rem;
-        left: -1.5rem;
-        width: 100%;
-        height: calc(100vh - 11.4rem);
-        padding: 0 1.5rem 0;
-        display: none;
-        background: #fff; } }
-    @media screen and (max-width: 768px) {
-      .header__menu {
-        top: 6rem;
-        height: calc(100vh - 6rem); } }
+        display: none; } }
     .header__menu__overlay {
       display: none; }
       @media screen and (max-width: 991px) {
         .header__menu__overlay {
           position: fixed;
-          top: 11.4rem;
+          top: 0;
           left: 0;
           width: 100vw;
-          height: calc(100vh - 11.4rem);
-          background: #fff; } }
-      @media screen and (max-width: 768px) {
-        .header__menu__overlay {
-          top: 6rem;
-          height: calc(100vh - 6rem); } }
+          height: 100vh;
+          background: #fff; }
+          .header__menu__overlay .header__menu {
+            width: 100%;
+            display: block; } }
   .header__nav {
     padding-right: 7rem; }
     @media screen and (max-width: 1200px) {
