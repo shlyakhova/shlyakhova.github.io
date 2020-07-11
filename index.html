@@ -215,15 +215,21 @@
                             <p class="text__color--white">{{users.text2}}</p>
 
                             <div class="users__icons__wrapper">
-                                <div class="users__icon__circle">
-                                    <img src="images/icon-tg.svg" alt="telegram">
-                                </div>
-                                <div class="users__icon__circle">
-                                    <img class="users__icon__msn" src="images/icon-msn.svg" alt="messenger">
-                                </div>
-                                <div class="users__icon__circle">
-                                    <img class="users__icon__viber" src="images/icon-viber.svg" alt="viber">
-                                </div>
+                                <a href="#">
+                                    <div class="users__icon__circle">
+                                        <img src="images/icon-tg.svg" alt="telegram">
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <div class="users__icon__circle">
+                                        <img class="users__icon__msn" src="images/icon-msn.svg" alt="messenger">
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <div class="users__icon__circle">
+                                        <img class="users__icon__viber" src="images/icon-viber.svg" alt="viber">
+                                    </div>
+                                </a>
                             </div>
                         </div>
 
@@ -248,8 +254,122 @@
                     </div>
                 </div>
             </section>
-            <section id="{{header.menu.[4].id}}" class="nav-anchor"></section>
-            <section id="{{header.menu.[5].id}}" class="nav-anchor"></section>
+
+            <section id="{{header.menu.[4].id}}" class="nav-anchor prices">
+                <div class="container">
+                    <h3 class="prices__title">{{prices.title}}</h3>
+                    <div class="prices__content-wrapper">
+                        <div class="prices__column prices__column__mobile2">
+                            <div class="prices__chatbot">
+                                <div class="prices__chatbot__hero">
+                                    <img src="images/chatbot-hero.svg" alt="hero">
+                                </div>
+                                <div class="prices__chatbot__margin--lg prices__position">
+                                    <img src="images/chatbot-logo.svg" alt="chatbot">
+                                </div>
+
+                                <div class="prices__chatbot__margin--sm prices__position">
+                                    <span class="prices__chatbot__text">{{prices.chatbot.name}}</span>
+                                </div>
+                                <div class="prices__chatbot__margin--lg prices__position">
+                                    <span class="prices__chatbot__text prices__text--lg prices__chatbot__name">{{prices.chatbot.price}}</span>
+                                </div>
+                                <div class="prices__chatbot__margin--sm prices__position">
+                                    <span class="prices__chatbot__text">{{prices.chatbot.maintance}}</span>
+                                </div>
+                                <div class="prices__chatbot__maintance-price prices__position">
+                                    <span class="prices__chatbot__text prices__text--md">{{prices.chatbot.maintancePrice}}</span>
+                                </div>
+
+                                <div class="prices__position">
+                                    <button class="button prices__button">{{buttonText}}<img class="button__arrow" src="images/arrow_right.svg" alt="arrow"></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="prices__column prices__column__mobile1">
+                            <div class="prices__app">
+                                <div class="prices__app__hero">
+                                    <img src="images/app-hero.svg" alt="hero">
+                                </div>
+                                <div class="prices__app__margin--md prices__position">
+                                    <img src="images/app-logo.svg" alt="app">
+                                </div>
+
+                                <div class="prices__app__margin--sm prices__position">
+                                    <span class="">{{prices.app.name}}</span>
+                                </div>
+                                <div class="prices__app__margin--lg prices__position">
+                                    <span class="prices__text--lg">{{prices.app.price}}</span>
+                                </div>
+                                <div class="prices__app__margin--sm prices__position">
+                                    <span class="">{{prices.app.maintance}}</span>
+                                </div>
+                                <div class="prices__position prices__app__margin--lg">
+                                    <span class="prices__text--md">{{prices.app.maintancePrice}}</span>
+                                </div>
+                                <div class="prices__position">
+                                    <span class="">{{prices.app.maintanceText}}</span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="{{header.menu.[5].id}}" class="nav-anchor customers">
+                <div class="container">
+                    <div class="customers___content">
+                        <div class="customers__column customers__column__left">
+                            <h3 class="text__color--white customers__margin-bottom customers__title">{{customers.title}}</h3>
+
+                            <p class="text__color--white customers__text">{{customers.text}}</p>
+
+                            <div class="customers__logo__wrapper">
+                                <div class="customers__logo">
+                                    <img src="images/logo1.svg" alt="logo">
+                                </div>
+                                <div class="customers__logo">
+                                    <img src="images/logo2.svg" alt="logo">
+                                </div>
+                                <div class="customers__logo">
+                                    <img src="images/logo3.svg" alt="logo">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="customers__column customers__column__right">
+                            <div class="customers__margin-bottom">
+                                <span class="customers__amount">{{customers.customersAmount}}</span>
+                            </div>
+
+                            <div><span class="customers__text-md">{{customers.customersAmountDescription}}</span></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="footer">
+                <div class="container">
+                    <div class="footer__wrapper">
+                        <div class="footer__logo">
+                            <img src="images/footer-logo.svg" alt="logo">
+                        </div>
+                        
+                        <div class="footer__menu">
+                            <ul class="footer__nav">
+                                {{#each header.menu}}
+                                <li class="footer__nav-item"><a href="#{{id}}" class="footer__nav-link">{{name}}</a></li>
+                                {{/each}}
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="footer__copyright">
+                        <span class="footer__copyright__text">{{footer.text}}</span>
+                    </div>
+                </div>
+            </footer>
         </script>
     </div>
 

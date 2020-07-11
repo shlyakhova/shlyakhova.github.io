@@ -1,0 +1,136 @@
+.prices {
+  padding: 23.2rem 0 9.1rem;
+  @include sm {
+    padding: 5rem 0;
+  }
+  &__content-wrapper {
+    padding: 0 7.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    @include md {
+      padding: 0;
+      margin-right: -1rem;
+      margin-left: -1rem;
+    }
+  }
+  &__column {
+    width: 50%;
+    padding: 1rem 1rem 0;
+    @include sm {
+      width: 100%;
+      height: 49.4rem;
+      &__mobile1 {
+        order: 1;
+      }
+      &__mobile2 {
+        order: 2;
+      }
+    }
+  }
+  &__title {
+    text-align: center;
+    margin-bottom: 4.4rem;
+    @include sm {
+      margin-bottom: 2.4rem;
+      font-size: 2.4rem;
+      line-height: 3rem;
+    }
+  }
+  &__text {
+    &--lg {
+      font-size: 5rem;
+      line-height: 3.2rem;
+      font-weight: bold;
+      @include md {
+        font-size: 4rem;
+      }
+    }
+    &--md {
+      font-size: 2.6rem;
+      line-height: 3.2rem;
+      font-weight: bold;
+    }
+  }
+  &__button {
+    width: 17rem;
+    background-color: rgba($color: #fff, $alpha: 0.3);
+  }
+  &__position {
+    position: relative;
+  }
+  &__chatbot {
+    position: relative;
+    height: 100%;
+    padding: 7rem 2rem 8.8rem;
+    text-align: center;
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 3rem rgba(136, 165, 191, 0.2);
+    background: $blue;
+    @include lg {
+      padding: 7rem 1rem 8.8rem;
+    }
+    @include sm {
+        padding: 4rem 1.5rem 2rem;
+        &__name {
+            font-size: 3.6rem;
+        }
+    }
+    &__text {
+      color: #fff;
+    }
+    &__margin {
+      &--lg {
+        margin-bottom: 3rem;
+      }
+      &--sm {
+        margin-bottom: 1rem;
+      }
+    }
+    &__maintance-price {
+      max-width: 28rem;
+      margin: 0 auto 4rem;
+    }
+    &__hero {
+      position: absolute;
+      bottom: -2.6rem;
+      left: -8.9rem;
+      width: 22.7rem;
+      @include md {
+        display: none;
+      }
+    }
+  }
+  &__app {
+    position: relative;
+    height: 100%;
+    padding: 6.6rem 2rem 2rem;
+    text-align: center;
+    border-radius: 1rem;
+    background: rgba(66, 83, 255, 0.1);
+    @include lg {
+      padding: 6.6rem 1rem 2rem;
+    }
+    @include sm {
+        padding: 4rem 2.4rem 2rem;
+    }
+    &__hero {
+      position: absolute;
+      bottom: -2.3rem;
+      right: -7.5rem;
+      @include md {
+        display: none;
+      }
+    }
+    &__margin {
+      &--sm {
+        margin-bottom: 1rem;
+      }
+      &--md {
+        margin-bottom: 2.3rem;
+      }
+      &--lg {
+        margin-bottom: 3rem;
+      }
+    }
+  }
+}

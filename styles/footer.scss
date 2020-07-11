@@ -1,0 +1,76 @@
+.footer {
+  width: 100%;
+  background-color: #f6f7ff;
+  &__wrapper {
+    @include flex-locating(row, center, center);
+    position: relative;
+    height: 11.4rem;
+    @include sm {
+      height: auto;
+      padding-top: 2.6rem;
+      display: block;
+    }
+  }
+  &__logo {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 15.4rem;
+    transform: translateY(-50%);
+    @include sm {
+      position: static;
+      padding-bottom: 3.3rem;
+      margin: auto;
+      transform: translateY(0);
+    }
+  }
+  
+  &__nav {
+    @include md {
+      padding-left: 15.4rem;
+    }
+    @include sm {
+      @include flex-locating (row, center, center);
+      padding-left: 0;
+      padding-bottom: 3rem;
+      flex-wrap: wrap;
+    }
+    &-item {
+      padding: 0 2rem;
+      display: inline-block;
+      &:hover {
+        .footer__nav-link {
+          color: $blue;
+          border-bottom: 0.2rem solid $blue;
+          @include sm {
+            border-bottom: 0.2rem solid transparent;
+          }
+        }
+      }
+      @include lg {
+        padding: 0 1rem;
+      }
+    }
+    &-link {
+      display: block;
+      color: $dark-blue;
+      text-decoration: none;
+      font-size: 1.4rem;
+      line-height: 17px;
+      font-weight: bold;
+      border-bottom: 0.2rem solid transparent;
+      @include sm {
+        line-height: 4rem;
+      }
+    }
+  }
+  &__copyright {
+    padding-bottom: 3rem;
+    text-align: center;
+    &__text {
+      font-size: 1.2rem;
+      line-height: 1.5rem;
+      color: #d4d7e7;
+    }
+  }
+}

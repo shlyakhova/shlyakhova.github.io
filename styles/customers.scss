@@ -1,0 +1,91 @@
+.customers {
+  padding: 9.1rem 0 11.1rem;
+  @include sm {
+    padding: 2rem 0 8.7rem;
+  }
+  &__text {
+    &-md {
+      font-size: 1.4rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #fff;
+    }
+  }
+  &__title {
+    @include sm {
+      font-size: 2.4rem;
+    }
+  }
+  &___content {
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 5rem;
+    background: $turquoise;
+  }
+  &__column {
+    width: 50%;
+    padding: 6rem 10rem;
+    @include md {
+      padding: 6rem 1.5rem;
+    }
+    @include sm {
+      width: 100%;
+      padding: 4.5rem 2.4rem;
+    }
+    &__right {
+      padding-left: 5rem;
+      text-align: right;
+      @include lg {
+        padding-left: 1.5rem;
+      }
+      @include sm {
+        padding: 1.5rem 2.4rem 4.5rem;
+        text-align: center;
+      }
+    }
+    &__left {
+      @include lg {
+        padding-right: 1.5rem;
+      }
+      @include sm {
+        text-align: center;
+        padding: 4.5rem 2.4rem 0;
+      }
+    }
+  }
+  &__margin-bottom {
+    margin-bottom: 1.7rem;
+  }
+  &__logo {
+    max-width: 25%;
+    @include sm {
+      width: 100%;
+      max-width: 100%;
+      padding-bottom: 3rem;
+    }
+    &__wrapper {
+      @include flex-locating(row, center, space-between);
+      padding-top: 4.5rem;
+      flex-wrap: wrap;
+    }
+  }
+  &__amount {
+    text-align: right;
+    font-size: 16.8rem;
+    line-height: 1;
+    font-weight: 800;
+    color: #fff;
+    -webkit-text-stroke: 0.2rem #fff;
+    -webkit-text-fill-color: $turquoise;
+    @include lg {
+      font-size: 14.8rem;
+    }
+    @include md {
+      font-size: 12.5rem;
+    }
+    @include sm {
+      font-size: 10rem;
+    }
+
+  }
+}
