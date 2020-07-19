@@ -180,18 +180,37 @@
       lastScrollTop = st;
   }
 
-    // Screen rotation 
-    window.addEventListener('orientationchange', function () {
-      navbarHeight = $('header').outerHeight();
-    }, false);
+  // Screen rotation 
+  window.addEventListener('orientationchange', function () {
+    navbarHeight = $('header').outerHeight();
+  }, false);
 
-    nav.find('a').on('click', function () {
-        const id = $(this).attr('href');
+  nav.find('a').on('click', function () {
+      const id = $(this).attr('href');
 
-        $('html, body').animate({
-            scrollTop: $(id).offset().top - navbarHeight
-        }, 500);
+      $('html, body').animate({
+          scrollTop: $(id).offset().top - navbarHeight
+      }, 500);
 
-        return false;
-    });
+      return false;
+  });
+
+  //Back to top button
+  $(window).scroll(function(){
+    if ($(window).scrollTop() >= $(window).height()) {
+      if ($('#back-to-top').css('opacity') === '0') {
+        $('#back-to-top').css({
+          'opacity': '1',
+          'pointer-events': 'all'
+        })
+      }
+    } else {
+      if ($('#back-to-top').css('opacity') === '1') {
+        $('#back-to-top').css({
+          'opacity': '0',
+          'pointer-events': 'none'
+        })
+      }
+    }
+  });
 })();

@@ -1737,3 +1737,36 @@ a:focus {
       font-size: 1.2rem;
       line-height: 1.5rem;
       color: #d4d7e7; }
+
+.back-to-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: fixed;
+  bottom: 13.3rem;
+  right: 4rem;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 4px 10px rgba(63, 65, 92, 0.2);
+          box-shadow: 0px 4px 10px rgba(63, 65, 92, 0.2);
+  z-index: 10;
+  background: #fff;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: opacity 1s ease;
+  transition: opacity 1s ease; }
+  @media screen and (max-width: 768px) {
+    .back-to-top {
+      right: 1.5rem;
+      bottom: 24.9rem; } }
