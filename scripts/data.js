@@ -107,5 +107,25 @@ var data = {
   },
   footer: {
     text: "© 2020. Корпорація BOTcommerce, Україна. Все права защищены."
+  },
+  lightbox: {
+    title: "Спробуйте, перші 6 місяців безкоштовно",
+    form: [
+      {
+        id: "name",
+        label: "Ім’я",
+        placeholder: "Ваше ім’я"
+      },
+      {
+        id: "phone",
+        label: "Телефон",
+        placeholder: "+380"
+      }
+    ],
+    buttonText: "Зателефонуйте мені",
+    feedback: {
+      textLg: "Дякуємо!",
+      textMd: "Наш менеджер зв’яжеться з Вами протягом години"
+    }
   }
 };

@@ -213,4 +213,48 @@
       }
     }
   });
+
+  // Order button
+  var timer;
+  function showLightbox (id) {
+    $('.overlay').css('display', 'flex');
+    id.css('display', 'block');
+  };
+  function closeLightbox () {
+    clearTimeout(timer);
+    $('.overlay').css('display', 'none');
+    $('#callback').css('display', 'none');
+    $('#feedback').css('display', 'none');
+  };
+  $('.order-button').click(function() {
+    showLightbox ($('#callback'));
+  });
+  $('#closer').click(function() {
+    closeLightbox();
+  });
+  $('.overlay').click(function(e) {
+    if (!$(e.target).closest('.lightbox').length) {
+      closeLightbox();
+    } 
+  })
+  $('.callback-form__button').click(function() {
+    if ($('#name').val() && $('#phone').val()) {
+      $('#name').removeClass('error');
+      $('#phone').removeClass('error');
+      $('#callback').css('display', 'none');
+      $('#feedback').css('display', 'block');
+      timer = setTimeout(closeLightbox, 5000);
+    } else {
+      if (!$('#name').val()) {
+        $('#name').addClass('error');
+      } else {
+        $('#name').removeClass('error');
+      }
+      if (!$('#phone').val()) {
+        $('#phone').addClass('error');
+      } else {
+        $('#phone').removeClass('error');
+      }
+    }
+  })
 })();

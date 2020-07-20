@@ -43,7 +43,7 @@ body {
   width: 100%;
   
 }
-h1, h2, h3, h4, h5, p, span{
+h1, h2, h3, h4, h5, p, span, label{
   font-weight: 800;
   color: $dark-blue;
 }
@@ -70,7 +70,7 @@ h5{
   font-size: 1.8rem;
   line-height: 3rem;
 }
-p, span{
+p, span, label{
   font-weight: 500;
   font-size: 1.6rem;
   line-height: 2.2rem;
