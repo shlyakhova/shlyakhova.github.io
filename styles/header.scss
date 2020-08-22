@@ -39,7 +39,7 @@
     }
   }
   &__nav {
-    padding-right: 7rem;
+    padding-right: 5.5rem;
     @include lg {
       padding-right: 1.5rem;
     }
@@ -60,7 +60,7 @@
         }
       }
       @include lg {
-        padding: 0 1rem;
+        padding: 0 0.5rem;
       }
       @include md {
         display: block;

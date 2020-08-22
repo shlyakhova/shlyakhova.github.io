@@ -216,17 +216,27 @@
 
   // Order button
   var timer;
+  var particles = new Particles('.button.particles-button', {
+    complete: function (){
+      $('#callback').css('display', 'none');
+      $('#feedback').css('display', 'block');
+      timer = setTimeout(closeLightbox, 2000);
+    }
+  });
   function showLightbox (id) {
     $('.overlay').css('display', 'flex');
     id.css('display', 'block');
   };
   function closeLightbox () {
     clearTimeout(timer);
+    $('#closer').removeAttr('style');
+    $('#name, #phone').val('').removeClass('error');
     $('.overlay').css('display', 'none');
     $('#callback').css('display', 'none');
     $('#feedback').css('display', 'none');
   };
   $('.order-button').click(function() {
+    $('.particles-wrapper, .button.particles-button').removeAttr('style');
     showLightbox ($('#callback'));
   });
   $('#closer').click(function() {
@@ -239,11 +249,9 @@
   })
   $('.callback-form__button').click(function() {
     if ($('#name').val() && $('#phone').val()) {
-      $('#name').removeClass('error');
-      $('#phone').removeClass('error');
-      $('#callback').css('display', 'none');
-      $('#feedback').css('display', 'block');
-      timer = setTimeout(closeLightbox, 5000);
+      $('#name, #phone').removeClass('error');
+      $('#closer').css('pointerEvents', 'none');
+      particles.disintegrate();
     } else {
       if (!$('#name').val()) {
         $('#name').addClass('error');

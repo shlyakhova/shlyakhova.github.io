@@ -765,7 +765,7 @@ a:focus {
             width: 100%;
             display: block; } }
   .header__nav {
-    padding-right: 7rem; }
+    padding-right: 5.5rem; }
     @media screen and (max-width: 1200px) {
       .header__nav {
         padding-right: 1.5rem; } }
@@ -783,7 +783,7 @@ a:focus {
             border-bottom: 0.2rem solid transparent; } }
       @media screen and (max-width: 1200px) {
         .header__nav-item {
-          padding: 0 1rem; } }
+          padding: 0 0.5rem; } }
       @media screen and (max-width: 991px) {
         .header__nav-item {
           display: block;
@@ -1104,8 +1104,7 @@ a:focus {
       .about-us__bottom__image2 {
         width: 11.6rem; } }
 .about-us__button {
-  width: 17rem;
-  margin: 2rem 0; }
+  margin: 2rem 0 2rem -1.9rem; }
 .about-us__icon--absolute {
   position: absolute; }
 .about-us__icon-tg {
@@ -1489,9 +1488,6 @@ a:focus {
     font-size: 2.6rem;
     line-height: 3.2rem;
     font-weight: bold; }
-  .prices__button {
-    width: 17rem;
-    background-color: rgba(255, 255, 255, 0.3); }
   .prices__position {
     position: relative; }
   .prices__chatbot {
@@ -1851,3 +1847,12 @@ a:focus {
     font-size: 1.4rem;
     line-height: 1.7rem;
     font-weight: bold; }
+
+.liquid-button path {
+  cursor: pointer; }
+.liquid-button text {
+  font-size: 1.4rem;
+  font-family: Arial;
+  font-weight: bold; }
+.liquid-button.liquid-button_burger {
+  margin-left: -1.9rem; }
